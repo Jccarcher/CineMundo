@@ -1,0 +1,22 @@
+{
+  "name": "cinemundo",
+  "version": "1.0.0",
+  "description": "proyecto backend para PDT",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jccarcher/CineMundo.git"
+  },
+  "author": "Programa desde Tu Casa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Jccarcher/CineMundo/issues"
+  },
+  "homepage": "https://github.com/Jccarcher/CineMundo#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
