@@ -8,8 +8,7 @@ module.exports.createUserController = async (req, res) =>{
         return res.status(200).send(userData)
     } catch (err) {
         return res.status(500).send(`Error ==> (UserController.js) File, in Function (createUserController)`)
-    }
-    
+    } 
 }
 
 module.exports.getUserController = async (req, res) => {
@@ -17,7 +16,7 @@ module.exports.getUserController = async (req, res) => {
     try {
         const userData = await getUser(email)
         console.log(email)
-        return res.status(200).send(userData).body;
+        return res.status(200).send(userData);
     } catch (err) {
         return res.status(500).send(err)
     }

@@ -6,7 +6,7 @@ const app = express()
 app.set('port', process.env.PORT || 4000);
 app.use(express.json())
 
-app.use("/users",userRoutes)
+app.use("/cinemundo",userRoutes)
 
 app.listen(app.get('port'), () =>{
     console.log("Server listening on port 4000")
