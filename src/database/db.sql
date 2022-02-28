@@ -1,18 +1,17 @@
 CREATE DATABASE cineMundo;
 
-CREATE TABLE usuario 
-    (
-    id_usr int PRIMARY KEY AUTO_INCREMENT,
-    nombre VARCHAR(30),
-    apellido VARCHAR(30),
-    email VARCHAR(40),
-    contraseña VARCHAR(30),
-    tipo VARCHAR(30),
-    fecha_creacion DATETIME,
-    dni int, 
-    edad int
-    
-);
+CREATE TABLE `cinemundo`.`usuarios`(
+	`id_usr` int auto_increment,
+	`name` varchar(30),
+	`lastname` varchar(30),
+	`documentNumber` int(10), 
+	`email` varchar(80),
+	`age` int(3),
+	`password` varchar(20),
+	`typeSuscription` varchar(7),
+	`createTime` datetime,
+	`updatetime` datetime,
+PRIMARY KEY (`id_usr`));
 
 CREATE TABLE administrador 
     (
