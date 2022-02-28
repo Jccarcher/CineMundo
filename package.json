@@ -4,7 +4,8 @@
   "description": "proyecto backend para PDT",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js "
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,9 @@
   },
   "homepage": "https://github.com/Jccarcher/CineMundo#readme",
   "dependencies": {
-    "express": "^4.17.3"
+    "express": "^4.17.3",
+    "moment": "^2.29.1",
+    "mysql2": "^2.3.3",
+    "node-fecth": "^0.0.1-security"
   }
 }
