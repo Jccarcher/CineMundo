@@ -13,15 +13,15 @@ module.exports.createUser = async(name, lastname, documentNumber, email, age, pa
     }
 }
 
-module.exports.getUser = async (email) => {
+module.exports.getUser = async (email, res) => {
     const query = `SELECT * FROM usuarios WHERE email = "${email}";`
     console.log(query);
     try {
-        const userData = await dbConnection(`${query}`)
+        const userData = await dbConnection(`${query}`,res)
         console.log("LA DATAAAA" + userData);
-        return userData
+        return res(JSON.stringify(userData))
     } catch (err) {
-        console.log("Error ==> (User.js) File Function {getUser} ==>,", err)
+        console.log("Error ==> (User.js) File Function {getUser} ==>,", err.error)
     }
 }
 

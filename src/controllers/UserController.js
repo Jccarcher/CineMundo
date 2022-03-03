@@ -15,8 +15,7 @@ module.exports.getUserController = async (req, res) => {
     const {email} = req.body
     try {
         const userData = await getUser(email)
-        console.log(email)
-        return res.status(200).send(userData);
+        return res.status(200).send(JSON.parse(userData).JSON);
     } catch (err) {
         return res.status(500).send(err)
     }

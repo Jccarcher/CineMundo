@@ -2,7 +2,7 @@ const mysql = require('mysql2');
 //const dbConfig = require('../database/ConfigDatabase');
 
 
- module.exports.dbConnection = (query) => new Promise((req,res) => {
+ module.exports.dbConnection = async (query) => {
     const connection = mysql.createConnection({
       host: 'localhost',
       user: 'root',
@@ -10,18 +10,7 @@ const mysql = require('mysql2');
       port: '3306',
       database: 'cinemundo'
     });
-
-      connection.query(query, (error, data) => {
-        if(error) {
-            res(error)
-        }
-
-        connection.end((err)=> {
-            if(err) {
-                res(err)
-            }
-            res(data)
-            console.log("PUTA DATA" + data.toString())
-        })
-    })
-})
+    const execution = await connection.query(query);
+      connection.end()
+    return execution
+}
