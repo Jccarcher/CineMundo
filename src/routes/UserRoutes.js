@@ -1,12 +1,8 @@
 const express = require('express')
-const {createUserController, 
-    getUserController, 
-    updateUserDataController, 
-    updateUsertypeSuscriptionController, 
-    updateUserPassController} = require("../controllers/UserController")
-
-
 const router = express.Router();
+const {createUserController, getUserController, updateUserDataController, updateUsertypeSuscriptionController, updateUserPassController} = 
+require('../controllers/UserController')
+
 console.log("pase por User routas")
 router.get("/user", getUserController)
 router.post("/user/create", createUserController)

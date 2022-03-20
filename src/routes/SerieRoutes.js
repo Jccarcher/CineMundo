@@ -1,12 +1,8 @@
 const express = require('express')
-const {getAllSeriesController,
-       getSerieController, 
-       createSerieController, 
-       updateSerieDataController,
-       DeleteSerieController } = require("../controllers/SerieController")
-
-
 const router = express.Router();
+const {getAllSeriesController, getSerieController, createSerieController, updateSerieDataController, DeleteSerieController } = 
+require('../controllers/SerieController')
+
 console.log("pase por Serie routas")
 router.get("/series", getAllSeriesController)
 router.get("/serie", getSerieController)

@@ -1,12 +1,8 @@
 const express = require('express')
-const {getAllMovieController, 
-       getMovieController,
-       createMovieController,
-       updateMovieDataController,
-       DeleteMovieController} = require("../controllers/MovieController")
+const router = express.Router()
+const {getAllMovieController, getMovieController, createMovieController, updateMovieDataController, DeleteMovieController} = 
+require('../controllers/MovieController')
 
-
-const router = express.Router();
 console.log("pase por Movie routas")
 router.get("/movies", getAllMovieController)
 router.get("/movie", getMovieController)
