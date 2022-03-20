@@ -20,6 +20,7 @@
   "dependencies": {
     "express": "^4.17.3",
     "moment": "^2.29.1",
+    "morgan": "^1.10.0",
     "mysql2": "^2.3.3",
     "node-fecth": "^0.0.1-security"
   }

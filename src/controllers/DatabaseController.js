@@ -21,7 +21,29 @@ const mysql = require('mysql2');
                 res(err)
             }
             res(data)
-            console.log("PUTA DATA" + data.toString())
         })
     })
+})
+
+module.exports.dbConnection2 = (query, data) => new Promise((req,res) => {
+  const connection = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: 'root',
+    port: '3306',
+    database: 'cinemundo'
+  });
+
+    connection.query(query, data, (error) => {
+      if(error) {
+          res(error)
+      }
+
+      connection.end((err)=> {
+          if(err) {
+              res(err)
+          }
+          res(data)
+      })
+  })
 })

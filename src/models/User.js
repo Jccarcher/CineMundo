@@ -1,14 +1,14 @@
-const {dbConnection} = require('../controllers/DatabaseController')
+const {dbConnection, dbConnection2 } = require('../controllers/DatabaseController')
 const moment = require('moment');
 
 module.exports.createUser = async(name, lastname, documentNumber, email, age, password, typeSuscription) => {
     let createTime = moment().format();
-    let query = `INSERT INTO usuarios (name, lastname, documentNumber, email, age, password, typeSuscription, createTime ) 
-    values("${name}","${lastname}","${documentNumber}","${email}",${age},${password},"${typeSuscription}","${createTime}");`
+    let updateTime = moment().format();
+    let query = `INSERT INTO usuarios (name, lastname, documentNumber, email, age, password, typeSuscription, createTime, updatetime ) 
+    values("${name}","${lastname}",${documentNumber},"${email}",${age},"${password}","${typeSuscription}","${createTime}","${updateTime}");`
        const userData = await dbConnection(`${query}`)
        console.log(userData);
     return {
-        //message: `A NEW user with EMAIL: ${email} has been create`,
         userData
     }
 }
@@ -16,56 +16,34 @@ module.exports.createUser = async(name, lastname, documentNumber, email, age, pa
 module.exports.getUser = async (email) => {
     const query = `SELECT * FROM usuarios WHERE email = "${email}";`
     console.log(query);
-    try {
-        const userData = await dbConnection(`${query}`)
-        console.log("LA DATAAAA" + userData);
-        return userData
-    } catch (err) {
-        console.log("Error ==> (User.js) File Function {getUser} ==>,", err)
+        const userData = await dbConnection(query, [email])
+        console.log("LA DATAAAA" + userData[0]); 
+    return {
+        user:userData[0]
     }
 }
 
-module.exports.updateUserData = async(name, lastname, email, age, documentNumber) => {
-    try {
-        const userData = await dbConnection(`
-        UPDATE usuarios SET name = "${name}", "${lastname}","${email}","${age}","${documentNumber}"
-        WHERE mail = "${email}";
-        `)
-    } catch (error) {
-        console.log("Error ==> (User.js) File Function {updateUserData} ==>,", error)
-    }
+module.exports.updateUserData = async(id_usr, name, lastname, documentNumber, email, age) => {
+    const query = `UPDATE usuarios SET name = ?, lastname = ?, documentNumber = ?, age = ? WHERE id_usr = ? AND email = ?;`
+    const userData = await dbConnection2(query,[name, lastname, documentNumber, age, id_usr, email])
     return {
-        message: `The user: ${email} has been Update,`,
         userData
     }
 }
 
-module.exports.updateUsertypeSuscription = async (email, typeSuscription, password) => {
-    try {
-        const userData = await dbConnection(`
-        UPDATE usuarios SET typeSuscription = "${typeSuscription}","
-        WHERE mail = "${email}" AND password = "${password}";
-        `)
-    } catch (error) {
-        console.log("Error ==> (User.js) File Function {updateUserPass} ==>,", error)
-    }
+module.exports.updateUsertypeSuscription = async (id_usr, email, typeSuscription, password) => {
+    let updateTime = moment().format();
+    const query = `UPDATE usuarios SET typeSuscription = ?, updatetime = ? WHERE id_usr = ? AND email = ? AND password = ?;`
+    const userData = await dbConnection2(query, [typeSuscription, updateTime, id_usr, email, password])
     return {
-        message: `The user: ${email} has been Update,`,
         userData
     }
 }
 
-module.exports.updateUserPass = async(email, password) =>{
-    try {
-        const userData = await dbConnection(`
-        UPDATE usuarios SET password = "${password}","
-        WHERE mail = "${email}";
-        `)
-    } catch (error) {
-        console.log("Error ==> (User.js) File Function {updateUserPass} ==>,", error)
-    }
+module.exports.updateUserPass = async(id_usr, email, password) =>{
+        const query = `UPDATE usuarios SET password = ? WHERE id_usr = ? AND email = ?;`
+        const userData = await dbConnection2(query, [password, id_usr, email])
     return {
-        message: `The user: ${email} has been Update,`,
         userData
     }
 }
