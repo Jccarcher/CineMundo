@@ -41,7 +41,7 @@ module.exports.updateMovieDataController = async(req, res) => {
 }
 
 module.exports.DeleteMovieController = async(req, res) => {
-    const {id_series}  = req.body
+    const {id_series}  = req.params
     try {
         const userData = await DeleteMovie(id_series)
         return res.send(userData)

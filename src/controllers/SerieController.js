@@ -41,7 +41,7 @@ module.exports.updateSerieDataController = async(req, res) => {
 }
 
 module.exports.DeleteSerieController = async(req, res) => {
-    const {id_series}  = req.body
+    const {id_series}  = req.params
     try {
         const userData = await DeleteSerie(id_series)
         return res.send(userData)

@@ -3,6 +3,7 @@ const express = require('express');
 const userRoutes = require("../cinemundo/src/routes/UserRoutes.js");
 const seriesRoutes = require("../cinemundo/src/routes/SerieRoutes.js");
 const moviesRouters = require("../cinemundo/src/routes/MovieRouter.js");
+const documentalRouters = require("../cinemundo/src/routes/DocumentalRouter.js");
 const app = express();
 
 
@@ -26,6 +27,7 @@ app.use(express.json())
 app.use("/cinemundo", userRoutes)
 app.use("/cinemundo", seriesRoutes)
 app.use("/cinemundo", moviesRouters)
+app.use("/cinemundo", documentalRouters)
 
 app.listen(app.get('port'), () =>{
     console.log("Server listening on port 4000")
