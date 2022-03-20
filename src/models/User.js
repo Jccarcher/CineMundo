@@ -13,7 +13,7 @@ module.exports.createUser = async(name, lastname, documentNumber, email, age, pa
     }
 }
 
-module.exports.getUser = async (email) => {
+module.exports.getUser = async (email, res) => {
     const query = `SELECT * FROM usuarios WHERE email = "${email}";`
     console.log(query);
         const userData = await dbConnection(query, [email])

@@ -2,7 +2,7 @@ const mysql = require('mysql2');
 //const dbConfig = require('../database/ConfigDatabase');
 
 
- module.exports.dbConnection = (query) => new Promise((req,res) => {
+ module.exports.dbConnection = async (query) => {
     const connection = mysql.createConnection({
       host: 'localhost',
       user: 'root',
@@ -23,7 +23,7 @@ const mysql = require('mysql2');
             res(data)
         })
     })
-})
+}
 
 module.exports.dbConnection2 = (query, data) => new Promise((req,res) => {
   const connection = mysql.createConnection({
