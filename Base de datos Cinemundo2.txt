@@ -1,0 +1,613 @@
+CREATE DATABASE cineMundo2;
+
+USE cineMundo2;
+
+CREATE TABLE users(
+	id_user int PRIMARY KEY AUTO_INCREMENT,
+	name VARCHAR(30),
+	lastname VARCHAR(30),
+	documentNumber int(10), 
+	email VARCHAR(80) UNIQUE,
+	age int(3),
+	password VARCHAR(20),
+	typeSuscription VARCHAR(7),
+	createTime datetime,
+	updatetime datetime
+);
+
+CREATE TABLE admins
+    (
+   	id_adm int PRIMARY KEY AUTO_INCREMENT,
+	name VARCHAR(30),
+	lastname VARCHAR(30),
+	documentNumber int(10), 
+	email VARCHAR(80) UNIQUE,
+	age int(3),
+	password VARCHAR(20),
+	typeSuscription VARCHAR(7),
+	createTime datetime,
+	updatetime datetime
+    
+);
+
+CREATE TABLE movies (
+    id_movie int PRIMARY KEY AUTO_INCREMENT,
+    title VARCHAR(30),
+    trailer VARCHAR(220),
+    synopsis VARCHAR(220),
+    poster VARCHAR(220),
+    year int
+);
+
+
+
+CREATE TABLE connect_movie(
+    id_con_movie int PRIMARY KEY AUTO_INCREMENT,
+    id_movie int ,
+    id_user int ,
+    assessment int,
+    comment VARCHAR(60),
+    FOREIGN KEY (id_movie) REFERENCES movies (id_movie),
+    FOREIGN KEY (id_user) REFERENCES users (id_user)
+);
+
+
+
+
+
+INSERT INTO movies (
+    title ,
+    year,
+    trailer,
+    synopsis ,
+    poster
+    ) 
+    VALUES(
+    "Spider-Man: No Way Home",
+     2021,
+     "www.youtube.com/watch?v=iqyPvdsOWKk/m/spider_man_no_way_home634649",
+     "Peter Parker is unmasked and no longer able to separate his normal life from the high-stakes of being a super-hero. When he asks for help from Doctor Strange the stakes become even more dangerous, forcing him to discover what it truly means to be Spider-Man.",
+     "https://img.ecartelera.com/noticias/fotos/66900/66992/2.jpg"
+
+);
+INSERT INTO movies (
+    title ,
+    year,
+    trailer,
+    synopsis ,
+    poster
+    ) 
+    VALUES(
+    "Lemony Snicket's A movies of Unfortunate Events",
+    2004,
+    "www.youtube.com/watch?v=fccho1IyX8Y/m/lemony_snicket11774",
+    "Three wealthy children's parents are killed in a fire. When they are sent to a distant relative, they find out that he is plotting to kill them and seize their fortune.",
+    "https://carrollwoodcenter.org/wp-content/uploads/2019/04/Lemony-Snicket-logo.jpg"
+);
+INSERT INTO movies (
+    title ,
+    year,
+    trailer,
+    synopsis ,
+    poster
+    ) 
+    VALUES(
+    "Avengers: Endgame",
+    2019,
+    "www.youtube.com/watch?v=TcMBFSGVi1c/m/avengers_endgame299534",
+    "After the devastating events of Avengers: Infinity War, the universe is in ruins due to the efforts of the Mad Titan, Thanos. With the help of remaining allies, the Avengers must assemble once more in order to undo Thanos' actions and restore order to the universe once and for all, no matter what consequences may be in store.",
+    "https://http2.mlstatic.com/D_NQ_NP_848578-MLA40987549719_032020-O.jpg"
+);
+INSERT INTO movies (
+    title ,
+    year,
+    trailer,
+    synopsis ,
+    poster
+    ) 
+    VALUES(
+    "Hackers",
+    1995,
+    "www.youtube.com/watch?v=Rn2cf_wJ4f4/m/hackers10428",
+    "Along with his new friends, a teenager who was arrested by the US Secret Service and banned from using a computer for writing a computer virus discovers a plot by a nefarious hacker, but they must use their computer skills to find the evidence while being pursued by the Secret Service and the evil computer genius behind the virus.",
+    "https://i.pinimg.com/originals/9c/00/bb/9c00bba3ad087174511f9c5cb9537823.jpg"
+
+);
+INSERT INTO movies (
+    title ,
+    year,
+    trailer,
+    synopsis ,
+    poster
+    ) 
+    VALUES(
+    "Just Friends",
+    2005,
+    "www.youtube.com/watch?v=vIBBVzy5UoQ/m/just_friends10033",
+    "While visiting his hometown during Christmas, a man comes face-to-face with his old high school crush whom he was best friends with – a woman whose rejection of him turned him into a ferocious womanizer.",
+    "https://movieposters2.com/images/1546044-b.jpg"
+);
+INSERT INTO movies (
+    title ,
+    year,
+    trailer,
+    synopsis ,
+    poster
+    ) 
+    VALUES(
+    "The Mad Adventures of Rabbi Jacob",
+    1973,
+    "https://www.youtube.com/watch?v=TGx2DwPq8AA",
+    "In this riot of frantic disguises and mistaken identities, Victor Pivert, a blustering, bigoted French factory owner, finds himself taken hostage by Slimane, an Arab rebel leader. The two dress up as rabbis as they try to elude not only assasins from Slimane's country, but also the police, who think Pivert is a murderer. Pivert ends up posing as Rabbi Jacob, a beloved figure who's returned to France for his first visit after 30 years in the United States. Adding to the confusion are Pivert's dentist-wife, who thinks her husband is leaving her for another woman, their daughter, who's about to get married, and a Parisian neighborhood filled with people eager to celebrate the return of Rabbi Jacob.",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Mad_Adventures_of_Rabbi_Jacob_-_US_poster.jpg/1200px-Mad_Adventures_of_Rabbi_Jacob_-_US_poster.jpg"
+);
+INSERT INTO movies (
+    title ,
+    year,
+    trailer,
+    synopsis ,
+    poster
+    ) 
+    VALUES(
+    "Saw VI",
+    2009,
+    "www.youtube.com/watch?v=XKxcf50t1xE/m/saw_VI22804",
+    "Special Agent Strahm is dead, and Detective Hoffman has emerged as the unchallenged successor to Jigsaw's legacy. However, when the FBI draws closer to Hoffman, he is forced to set a game into motion, and Jigsaw's grand scheme is finally understood.",
+    "https://m.guiadelocio.com/var/guiadelocio.com/storage/images/cine/archivo-peliculas/saw-vi/7702655-9-esl-ES/saw-vi.jpg"
+);
+INSERT INTO movies (
+    title ,
+    year,
+    trailer,
+    synopsis ,
+    poster
+    ) 
+    VALUES(
+     "Superman Returns",
+     2006,
+     "www.youtube.com/watch?v=zVCozSQj8TQ/m/superman_returns1452",
+     "Superman returns to discover his 5-year absence has allowed Lex Luthor to walk free, and that those he was closest to felt abandoned and have moved on. Luthor plots his ultimate revenge that could see millions killed and change the face of the planet forever, as well as ridding himself of the Man of Steel.",
+     "https://i.blogs.es/028328/148056218_66f9ce7a0e_o/450_1000.jpg"
+);
+INSERT INTO movies (
+    title ,
+    year,
+    trailer,
+    synopsis ,
+    poster
+    ) 
+    VALUES(
+     "The Sorcerer's Apprentice",
+     2010,
+     "www.youtube.com/watch?v=v2uV0_1C4UM/m/sorcerers_apprentice27022",
+     "Balthazar Blake is a master sorcerer in modern-day Manhattan trying to defend the city from his arch-nemesis, Maxim Horvath. Balthazar can't do it alone, so he recruits Dave Stutler, a seemingly average guy who demonstrates hidden potential, as his reluctant protégé. The sorcerer gives his unwilling accomplice a crash course in the art and science of magic, and together, these unlikely partners work to stop the forces of darkness.",
+      "https://i.pinimg.com/originals/c2/4c/eb/c24ceb204a192d6c222b76849dc1fc63.jpg"
+);
+INSERT INTO movies (
+    title ,
+    year,
+    trailer,
+    synopsis ,
+    poster
+    ) 
+    VALUES(
+    "Ron's Gone Wrong",
+    2021,
+    "www.youtube.com/watch?v=fCqGfjBSk0I/m/rons_gone_wrong482321",
+    "In a world where walking, talking, digitally connected bots have become children's best friends, an 11-year-old finds that his robot buddy doesn't quite work the same as the others do.",
+    "https://i.pinimg.com/736x/a5/21/ff/a521ff9424db57ebc495b3b760859300.jpg"
+
+
+);
+INSERT INTO movies (
+    title ,
+    year,
+    trailer,
+    synopsis ,
+    poster
+    ) 
+    VALUES(
+    "Chaos Walking",
+    2021,
+    "https://www.youtube.com/watch?v=nRf4ZgzHoVw",
+    "Two unlikely companions embark on a perilous adventure through the badlands of an unexplored planet as they try to escape a dangerous and disorienting reality, where all inner thoughts are seen and heard by everyone.",
+    "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/posters/chaos-walking-poster-fotogramas-1605452797.jpg"
+);
+INSERT INTO movies (
+    title ,
+    year,
+    trailer,
+    synopsis ,
+    poster
+    ) 
+    VALUES(
+    "The Machines",
+     2014,
+    "https://www.youtube.com/watch?v=Nq72Aux346Y",
+    "This Disc Details the machine and tactics of the American army, which in 1930 lacked machines, weapons and tanks. Soldiers marched with sticks because they had no weapons, and in the end they fought in their own way to win around the world.\r Extras:\r Autobiography of a Jeep\r Army News",
+    "https://www.lahiguera.net/cinemania/pelicula/6511/the_machine-cartel-5537.jpg"
+
+);
+INSERT INTO movies (
+    title ,
+    year,
+    trailer,
+    synopsis ,
+    poster
+    ) 
+    VALUES(
+    "Transformers: Age of Extinction",
+    2014,
+    "www.youtube.com/watch?v=glcOSZrUw2Q/m/transformers_age_of_extinction91314",
+    "As humanity picks up the pieces, following the conclusion of <DQ>Transformers: Dark of the Moon,<DQ> Autobots and Decepticons have all but vanished from the face of the planet. However, a group of powerful, ingenious businessman and scientists attempt to learn from past Transformer incursions and push the boundaries of technology beyond what they can control - all while an ancient, powerful Transformer menace sets Earth in his cross-hairs.",
+    "https://i.pinimg.com/originals/da/04/e9/da04e9b6433e605f6379f8e13992ac2d.jpg"
+);
+INSERT INTO movies (
+    title ,
+    year,
+    trailer,
+    synopsis ,
+    poster
+    ) 
+    VALUES(
+     "Transformers",
+     2007,
+    "www.youtube.com/watch?v=dI4RZIaSC2M/m/transformers_the_movie1858",
+    "Young teenager Sam Witwicky becomes involved in the ancient struggle between two extraterrestrial factions of transforming robots – the heroic Autobots and the evil Decepticons. Sam holds the clue to unimaginable power and the Decepticons will stop at nothing to retrieve it.",
+    "https://i.pinimg.com/originals/19/f7/5e/19f75e1425a264680de608ebe60f668a.jpg"
+
+);
+
+INSERT INTO movies (
+	title,
+	year,
+	trailer,
+	synopsis,
+	poster
+)
+VALUES(
+        "Friends",
+        1994,
+        "www.youtube.com/watch?v=hDNNmeeJs1Q/tv/friends1668",
+        "Friends is an American television sitcom created by David Crane and Marta Kauffman, which aired on NBC from September 22, 1994, to May 6, 2004, lasting ten seasons. With an ensemble cast starring Jennifer Aniston, Courteney Cox, Lisa Kudrow, Matt LeBlanc, Matthew Perry and David Schwimmer, the show revolves around six friends in their 20s and 30s who live in Manhattan, New York City. The movies was produced by Bright/Kauffman/Crane Productions, in association with Warner Bros. Television. The original executive producers were Kevin S. Bright, Kauffman, and Crane.",
+        "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/friends-reunion-poster-fotogramas-1621445919.jpeg"
+    );
+INSERT INTO movies(
+	title,
+	year,
+	trailer,
+	synopsis,
+	poster
+)
+VALUES(
+        "Lupin",
+        2021,
+        "www.youtube.com/watch?v=ga0iTWXCGa0/tv/lupin96677",
+        "Inspired by the adventures of Arsène Lupin, gentleman thief Assane Diop sets out to avenge his father for an injustice inflicted by a wealthy family.",
+        "https://i0.wp.com/noescinetodoloquereluce.com/wp-content/uploads/2020/12/LUPIN_KA_Vertical_RGB_ES-scaled.jpg?resize=800%2C1185&ssl=1"
+    );
+INSERT INTO movies(
+	title,
+	year,
+	trailer,
+	synopsis,
+	poster
+)
+VALUES(
+        "Supernatural",
+        2005,
+        "www.youtube.com/watch?v=e9aty0dSc2Y/tv/supernatural1622",
+        "When they were boys, Sam and Dean Winchester lost their mother to a mysterious and demonic supernatural force. Subsequently, their father raised them to be soldiers. He taught them about the paranormal evil that lives in the dark corners and on the back roads of America ... and he taught them how to kill it. Now, the Winchester brothers crisscross the country in their '67 Chevy Impala, battling every kind of supernatural threat they encounter along the way. ",
+        "https://www.bolsamania.com/moviesadictos/wp-content/uploads/2013/09/SPN_S_9_Pster1_V11.jpg"
+    ); 
+INSERT INTO movies(
+	title,
+	year,
+	trailer,
+	synopsis,
+	poster
+)
+VALUES(
+        "Viking",
+        2016,
+        "www.youtube.com/watch?v=5FWtcorm7hA/m/viking_legacy369698",
+        "The early Middle Ages. A time of heavy swords and dark blood law. The ruling clan is in discord. The guilt for the accidental death of the brother has fallen on the Grand Duke. According to the law, revenge must be taken by the younger brother, a bastard. For the refusal to kill, he has to pay with eve- rything he had",
+        "https://i.pinimg.com/236x/5b/e5/54/5be5541dbe769d2a0affcc4153a8fef5--movies-movies-hd-movies.jpg"
+    );
+INSERT INTO movies(
+	title,
+	year,
+	trailer,
+	synopsis,
+	poster
+)
+VALUES(
+        "The Umbrella Academy",
+        2019,
+        "www.youtube.com/watch?v=0DAmWHxeoKw/tv/the_umbrella_academy75006",
+        "A dysfunctional family of superheroes comes together to solve the mystery of their father's death, the threat of the apocalypse and more.",
+        "https://i.pinimg.com/originals/4f/03/e5/4f03e54e44113fcd524a1904bb822b43.jpg"
+    ); 
+INSERT INTO movies(
+	title,
+	year,
+	trailer,
+	synopsis,
+	poster
+)
+VALUES(
+        "Gordon Ramsay's Ultimate Cookery Course",
+        2012,
+        "www.youtube.com/watch?v=oMY78TcytGc59442",
+        "In this practical home cookery movies Gordon Ramsay strips away the graft and complexity to show how to cook 100 simple, accessible and modern recipes to stake your life on.",
+        "https://images-na.ssl-images-amazon.com/images/I/719JTF0ZcjL.jpg"
+    ); 
+INSERT INTO movies(
+	title,
+	year,
+	trailer,
+	synopsis,
+	poster
+)
+VALUES(
+        "Teen Titans Go! vs. Teen Titans",
+        2019,
+        "www.youtube.com/watch?v=7tCawDmKGQA/m/teen_titans_go_vs_teen_titans556901",
+        "In Teen Titans Go! vs Teen Titans, the comedic modern-day quintet takes on their 2003 counterparts when villains from each of their worlds join forces to pit the two Titan teams against each other. They'll need to set aside their differences and work together to combat Trigon, Hexagon, Santa Claus (that's right, Santa!) and time itself in order to save the multiverse.",
+        "https://i.pinimg.com/736x/9f/12/b6/9f12b6a6565de4424a43b017756af8ff.jpg"
+    );
+INSERT INTO movies(
+	title,
+	year,
+	trailer,
+	synopsis,
+	poster
+)
+VALUES(
+        "Post Mortem",
+        2020,
+        "www.youtube.com/watch?v=xU2HFzK5OB8/m/post_mortem_2020120652",
+	"In Chile, 1973, during the last days of Salvador Allende's presidency, an employee at a Morgue's recording office falls for a burlesque dancer who mysteriously disappears.",
+        "https://pics.filmaffinity.com/Post_Mortem-653544489-large.jpg"
+    ); 
+INSERT INTO movies(
+	title,
+	year,
+	trailer,
+	synopsis,
+	poster
+)
+VALUES(
+        "Señora Acero",
+        2014,
+        "www.youtube.com/watch?v=MhS_d_zMWCA63764",
+        "The adventures of Vicenta Acero, the feared coyote who now leads the dynasty of illicit dealings once under the control of her father.",
+        "https://i.pinimg.com/originals/e6/90/c5/e690c5d868dc578e6a9c48547c3f7a0e.jpg"
+    ); 
+INSERT INTO movies(
+	title,
+	year,
+	trailer,
+	synopsis,
+	poster
+)
+VALUES(
+        "Stranger Things",
+        2016,
+        "www.youtube.com/watch?v=mnd7sFt5c3A/tv/stranger_things66732",
+        "When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces, and one strange little girl.",
+        "https://i.pinimg.com/originals/06/df/53/06df535588bd2b5bbfc784547093813c.jpg"
+    ); 
+INSERT INTO movies(
+	title,
+	year,
+	trailer,
+	synopsis,
+	poster
+)
+VALUES(
+        "WandaVision",
+        2021,
+        "www.youtube.com/watch?v=Ch0wMWnXjeA/tv/wandavision/s0185271",
+        "Wanda Maximoff and Vision—two super-powered beings living idealized suburban lives—begin to suspect that everything is not as it seems.",
+        "https://i.pinimg.com/736x/2a/1b/94/2a1b94e1a415ce2fa3bb970545d26c50.jpg"
+    );
+INSERT INTO movies(
+	title,
+	year,
+	trailer,
+	synopsis,
+	poster
+)
+VALUES(
+        "Jupiter's Legacy",
+        20213,
+        "www.youtube.com/watch?v=TY3IAqm-gpE/tv/jupiters_legacy/s0193484",
+        "As the world's first generation of superheroes (who received their powers in the 1930s) become the revered elder guard in the present, their superpowered children struggle to live up to the legendary feats of their parents.",
+        "https://es.web.img3.acsta.net/r_1280_720/pictures/21/04/07/10/26/5189851.jpg"
+    ); 
+INSERT INTO movies(
+	title,
+	year,
+	trailer,
+	synopsis,
+	poster
+)
+VALUES(
+        "Arcane",
+        20213,
+        "www.youtube.com/watch?v=3Svs_hl897c/tv/arcane/s0194605",
+        "Amid the stark discord of twin cities Piltover and Zaun, two sisters fight on rival sides of a war between magic technologies and clashing convictions.",
+        "https://www.cinemascomics.com/wp-content/uploads/2021/09/arcane-character-posters_yrxw2.jpg"
+    );
+
+INSERT INTO movies(
+	title,
+	year,
+	trailer,
+	synopsis,
+	poster
+)
+VALUES(
+	"Cidade dos Ovnis",
+        2018,
+	"https://www.youtube.com/watch?v=tnIq8-GPErQ",
+        "Short film about Peruíbe and why it is considered the city of UFOs.",
+        "https://super.abril.com.br/wp-content/uploads/2018/07/ovinis_1.jpg?quality=90&strip=info&w=1000"
+    ); 
+INSERT INTO movies(
+	title,
+	year,
+	trailer,
+	synopsis,
+	poster
+)
+VALUES(
+        "El Vaticano",
+        2020,
+	"https://www.youtube.com/watch?v=EGEn41Yeqak",
+        "After failing to commit suicide, by being rescued by Palermo, Jorge decided to live with him in an abandoned building. The place will witness how two completely opposite people that fight their way to live in a wild place, and in a society that chooses to segregate them.",
+        "https://caligari.com.ar/wp-content/uploads/2020/08/ElVaticano1-1024x536.jpg"
+    );
+INSERT INTO movies(
+	title,
+	year,
+	trailer,
+	synopsis,
+	poster
+)
+VALUES(
+        "Lost Pyramids of the Aztecs",
+        2020,
+	"https://www.youtube.com/watch?v=D2EzhUcCNN4",
+        "For centuries, archaeologists have been trying to understand the Aztec empire and reveal the truth about their origins. Now, new excavations could reveal astonishing secrets about how they lived and what life was like inside one of the greatest empires in history. Where did this group of nomadic people originate from? How did they undertake building their towering pyramids and other ambitious engineering feats using manpower alone? And how was such a powerful empire wiped out after just 200 years of power?",
+        "https://images-na.ssl-images-amazon.com/images/I/91d0PIaFzXL._RI_.jpg"
+    );
+INSERT INTO movies(
+	title,
+	year,
+	trailer,
+	synopsis,
+	poster
+)
+VALUES(
+        "The Beatles: Get Back - The Rooftop Concert",
+        2022,
+	"www.youtube.com/watch?v=f3Ta3dNdVS8/m/the_beatles_get_back_the_rooftop_concert923403",
+        "On the 30th of January, 1969, the Beatles performed an unannounced concert from the rooftop of their Apple Corps headquarters at Savile Row, within central London's office and fashion district. Experience the final and unforgettable iconic performance of The Beatles in a special 60-minute presentation, digitally remastered into the image and sound quality of IMAX DMR technology.",
+        "https://juju.b-cdn.net/wp-content/uploads/2022/01/The-Beatles-Get-Back-The-Rooftop-Concert-Wallpaper-and-images.jpg"
+    ); 
+INSERT INTO movies(
+	title,
+	year,
+	trailer,
+	synopsis,
+	poster
+)
+VALUES(
+        "The Alpinist",
+        2021,
+        "www.youtube.com/watch?v=SRpVyzagXLQ/m/the_alpinist_2021682587",
+        "When filmmaker Peter Mortimer encounters an elusive young climber named Marc-André Leclerc, an evolution in free solo mountaineering unfolds. Along the two-year journey up high alpine peaks and steep frozen waterfalls, Peter explores Marc’s connection to nature, his uncompromising quest for adventure, and the risks he takes to pursue his passion.",
+        "https://1.bp.blogspot.com/-JcjSDoBQXQ4/YQFcGdSJt-I/AAAAAAAA_So/tv-wnxBYD8EdkpzsNNQR79HtUuU70636gCLcBGAsYHQ/s2048/The%2BAlpinist%2BFinal_poster.jpg"
+    ); 
+INSERT INTO movies(
+	title,
+	year,
+	trailer,
+	synopsis,
+	poster
+)
+VALUES(
+        "The Rescue",
+        2021,
+	"www.youtube.com/watch?v=_-Kw5kAPSbk/m/the_rescue_2021680058",
+        "The enthralling, against-all-odds story that transfixed the world in 2018: the daring rescue of twelve boys and their coach from deep inside a flooded cave in Northern Thailand.",
+        "https://i.pinimg.com/736x/ba/10/d4/ba10d4448edf81c5c5ca9ebd1e1fc5d7.jpg"
+    ); 
+INSERT INTO movies(
+	title,
+	year,
+	trailer,
+	synopsis,
+	poster
+)
+VALUES(
+        "Secrets of the Whales",
+        2021,
+	"www.youtube.com/watch?v=xOySOlB78dM/tv/secrets_of_the_whales/s01106899",
+        "Sigourney Weaver guides viewers on a journey to the heart of whale culture to experience the extraordinary communication skills and intricate social structures of five different whale species. With the help of new science and technology, viewers witness whales making lifelong friendships, teaching clan heritage and traditions to their young and grieving deeply for the loss of loved ones.",
+        "https://pics.filmaffinity.com/Secrets_of_the_Whales_Miniserie_de_TV-359332206-large.jpg"
+    ); 
+INSERT INTO movies(
+	title,
+	year,
+	trailer,
+	synopsis,
+	poster
+)
+VALUES(
+        "Vitals",
+        2021,
+        "www.youtube.com/watch?v=A5Tp7PTm2BY118099",
+        "An intense, moving, hopeful portrait of life at a Barcelona hospital over the toughest times of the Covid-19 pandemic.",
+        "https://es.web.img3.acsta.net/pictures/21/01/14/16/30/1339972.jpg"
+    ); 
+INSERT INTO movies(
+	title,
+	year,
+	trailer,
+	synopsis,
+	poster
+)
+VALUES(
+        "España: la primera globalización",
+        2021,
+	"www.youtube.com/watch?v=Re8_vdJfPZA885654",
+        "A new reading of the historical period that began with the reign of the Catholic Monarchs (1479-1516) and the discovery of America (1492), as well as an analysis of its undeniable influence on the subsequent evolution of the history of Spain and the world.",
+        "https://www.ecartelera.com/carteles/16900/16910/001.jpg"
+    ); 
+INSERT INTO movies(
+	title,
+	year,
+	trailer,
+	synopsis,
+	poster
+)
+VALUES(
+        "Power On: The Story of Xbox",
+        2021,
+	"www.youtube.com/watch?v=Uc3wkL5fDuA/tv/power_on_the_story_of_xbox/s01153403",
+        "Xbox almost didn't happen. Find out why in this behind-the-scenes, six-part movies that takes you back to the scrappy beginnings of Microsoft's video game console. It's the untold story of the people behind the box, glitches and all.",
+        "https://assets.xboxservices.com/assets/17/e3/17e371cc-f7f6-4a85-8ee5-3ebed3686d32.jpg?n=2356790_Superhero-1400_1920x1080.jpg"
+    ); 
+INSERT INTO movies(
+	title,
+	year,
+	trailer,
+	synopsis,
+	poster
+)
+VALUES(
+        "Simeone. Vivir partido a partido",
+        2022,
+	"www.youtube.com/watch?v=8ujzwjup_UY156343",
+        "Diego Pablo Simeone has created a unique way of understanding soccer. The cholismo is so much more than a game strategy. It is a range of values, tools, and hard work that our protagonist has picked up when facing difficulties during his career. We will spend a unique season by Cholo’s side, discovering the secret behind the success that is writing the story of his legacy.",
+        "https://es.web.img3.acsta.net/pictures/21/12/29/15/35/2214922.jpg"
+    ); 
+
+INSERT INTO movies(
+	title,
+	year,
+	trailer,
+	synopsis,
+	poster
+)
+VALUES(
+        "WWII in Color: Road to Victory",
+        2021,
+        "www.youtube.com/watch?v=8NEpQqukGxI153966",
+        "Gripping historical footage and expert commentary give detailed insights into the leading figures and decisive turning points of World War II.",
+        "https://static.next-episode.net/tv-shows-images/huge/wwii-in-color-road-to-victory.jpg"
+); 
+

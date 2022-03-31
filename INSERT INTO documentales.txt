@@ -1,0 +1,169 @@
+INSERT INTO documentales{
+	title,
+	year,
+	trailer,
+	synopsis,
+	poster
+}
+VALUES{
+	"Cidade dos Ovnis",
+        2018,
+	"https://www.youtube.com/watch?v=tnIq8-GPErQ",
+        "Short film about Peruíbe and why it is considered the city of UFOs.",
+        "https://super.abril.com.br/wp-content/uploads/2018/07/ovinis_1.jpg?quality=90&strip=info&w=1000"
+    }, 
+INSERT INTO documentales{
+	title,
+	year,
+	trailer,
+	synopsis,
+	poster
+}
+VALUES{
+        "El Vaticano",
+        2020,
+	"https://www.youtube.com/watch?v=EGEn41Yeqak",
+        "After failing to commit suicide, by being rescued by Palermo, Jorge decided to live with him in an abandoned building. The place will witness how two completely opposite people that fight their way to live in a wild place, and in a society that chooses to segregate them.",
+        "https://caligari.com.ar/wp-content/uploads/2020/08/ElVaticano1-1024x536.jpg"
+    },
+INSERT INTO documentales{
+	title,
+	year,
+	trailer,
+	synopsis,
+	poster
+}
+VALUES{
+        "Lost Pyramids of the Aztecs",
+        2020,
+	"https://www.youtube.com/watch?v=D2EzhUcCNN4",
+        "For centuries, archaeologists have been trying to understand the Aztec empire and reveal the truth about their origins. Now, new excavations could reveal astonishing secrets about how they lived and what life was like inside one of the greatest empires in history. Where did this group of nomadic people originate from? How did they undertake building their towering pyramids and other ambitious engineering feats using manpower alone? And how was such a powerful empire wiped out after just 200 years of power?",
+        "https://images-na.ssl-images-amazon.com/images/I/91d0PIaFzXL._RI_.jpg"
+    },
+INSERT INTO documentales{
+	title,
+	year,
+	trailer,
+	synopsis,
+	poster
+}
+VALUES{
+        "The Beatles: Get Back - The Rooftop Concert",
+        2022,
+	"www.youtube.com/watch?v=f3Ta3dNdVS8/m/the_beatles_get_back_the_rooftop_concert923403",
+        "On the 30th of January, 1969, the Beatles performed an unannounced concert from the rooftop of their Apple Corps headquarters at Savile Row, within central London's office and fashion district. Experience the final and unforgettable iconic performance of The Beatles in a special 60-minute presentation, digitally remastered into the image and sound quality of IMAX DMR technology.",
+        "https://juju.b-cdn.net/wp-content/uploads/2022/01/The-Beatles-Get-Back-The-Rooftop-Concert-Wallpaper-and-images.jpg"
+    }, 
+INSERT INTO documentales{
+	title,
+	year,
+	trailer,
+	synopsis,
+	poster
+}
+VALUES{
+        "The Alpinist",
+        2021,
+        "genres": "Documental",
+        "www.youtube.com/watch?v=SRpVyzagXLQ/m/the_alpinist_2021682587",
+        "When filmmaker Peter Mortimer encounters an elusive young climber named Marc-André Leclerc, an evolution in free solo mountaineering unfolds. Along the two-year journey up high alpine peaks and steep frozen waterfalls, Peter explores Marc’s connection to nature, his uncompromising quest for adventure, and the risks he takes to pursue his passion.",
+        "https://1.bp.blogspot.com/-JcjSDoBQXQ4/YQFcGdSJt-I/AAAAAAAA_So/tv-wnxBYD8EdkpzsNNQR79HtUuU70636gCLcBGAsYHQ/s2048/The%2BAlpinist%2BFinal_poster.jpg"
+    }, 
+INSERT INTO documentales{
+	title,
+	year,
+	trailer,
+	synopsis,
+	poster
+}
+VALUES{
+        "The Rescue",
+        2021,
+	"www.youtube.com/watch?v=_-Kw5kAPSbk/m/the_rescue_2021680058",
+        "The enthralling, against-all-odds story that transfixed the world in 2018: the daring rescue of twelve boys and their coach from deep inside a flooded cave in Northern Thailand.",
+        "https://m.media-amazon.com/images/I/71wvGocDJjL._SS500_.jpg"
+    }, 
+INSERT INTO documentales{
+	title,
+	year,
+	trailer,
+	synopsis,
+	poster
+}
+VALUES{
+        "Secrets of the Whales",
+        2021,
+	"www.youtube.com/watch?v=xOySOlB78dM/tv/secrets_of_the_whales/s01106899",
+        "Sigourney Weaver guides viewers on a journey to the heart of whale culture to experience the extraordinary communication skills and intricate social structures of five different whale species. With the help of new science and technology, viewers witness whales making lifelong friendships, teaching clan heritage and traditions to their young and grieving deeply for the loss of loved ones.",
+        "https://pics.filmaffinity.com/Secrets_of_the_Whales_Miniserie_de_TV-359332206-large.jpg"
+    }, 
+INSERT INTO documentales{
+	title,
+	year,
+	trailer,
+	synopsis,
+	poster
+}
+VALUES{
+        "Vitals",
+        2021,
+        "www.youtube.com/watch?v=A5Tp7PTm2BY118099",
+        "An intense, moving, hopeful portrait of life at a Barcelona hospital over the toughest times of the Covid-19 pandemic.",
+        "https://es.web.img3.acsta.net/pictures/21/01/14/16/30/1339972.jpg"
+    }, 
+INSERT INTO documentales{
+	title,
+	year,
+	trailer,
+	synopsis,
+	poster
+}
+VALUES{
+        "España: la primera globalización",
+        2021,
+	"www.youtube.com/watch?v=Re8_vdJfPZA885654",
+        "A new reading of the historical period that began with the reign of the Catholic Monarchs (1479-1516) and the discovery of America (1492), as well as an analysis of its undeniable influence on the subsequent evolution of the history of Spain and the world.",
+        "https://www.ecartelera.com/carteles/16900/16910/001.jpg"
+    }, 
+INSERT INTO documentales{
+	title,
+	year,
+	trailer,
+	synopsis,
+	poster
+}
+VALUES{
+        "Power On: The Story of Xbox",
+        2021,
+	"www.youtube.com/watch?v=Uc3wkL5fDuA/tv/power_on_the_story_of_xbox/s01153403",
+        "Xbox almost didn't happen. Find out why in this behind-the-scenes, six-part series that takes you back to the scrappy beginnings of Microsoft's video game console. It's the untold story of the people behind the box, glitches and all.",
+        "https://assets.xboxservices.com/assets/17/e3/17e371cc-f7f6-4a85-8ee5-3ebed3686d32.jpg?n=2356790_Superhero-1400_1920x1080.jpg"
+    }, 
+INSERT INTO documentales{
+	title,
+	year,
+	trailer,
+	synopsis,
+	poster
+}
+VALUES{
+        "Simeone. Vivir partido a partido",
+        2022,
+	"www.youtube.com/watch?v=8ujzwjup_UY156343",
+        "Diego Pablo Simeone has created a unique way of understanding soccer. The cholismo is so much more than a game strategy. It is a range of values, tools, and hard work that our protagonist has picked up when facing difficulties during his career. We will spend a unique season by Cholo’s side, discovering the secret behind the success that is writing the story of his legacy.",
+        "https://es.web.img3.acsta.net/pictures/21/12/29/15/35/2214922.jpg"
+    }, 
+INSERT INTO documentales{
+	title,
+	year,
+	trailer,
+	synopsis,
+	poster
+}
+VALUES{
+        "WWII in Color: Road to Victory",
+        2021,
+        "www.youtube.com/watch?v=8NEpQqukGxI153966",
+        "Gripping historical footage and expert commentary give detailed insights into the leading figures and decisive turning points of World War II.",
+        "https://static.next-episode.net/tv-shows-images/huge/wwii-in-color-road-to-victory.jpg"
+}, 

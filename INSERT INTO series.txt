@@ -1,0 +1,182 @@
+INSERT INTO series{
+	title,
+	year,
+	trailer,
+	synopsis,
+	poster
+}
+VALUES{
+        "Friends",
+        1994,
+        "www.youtube.com/watch?v=hDNNmeeJs1Q/tv/friends1668",
+        "Friends is an American television sitcom created by David Crane and Marta Kauffman, which aired on NBC from September 22, 1994, to May 6, 2004, lasting ten seasons. With an ensemble cast starring Jennifer Aniston, Courteney Cox, Lisa Kudrow, Matt LeBlanc, Matthew Perry and David Schwimmer, the show revolves around six friends in their 20s and 30s who live in Manhattan, New York City. The series was produced by Bright/Kauffman/Crane Productions, in association with Warner Bros. Television. The original executive producers were Kevin S. Bright, Kauffman, and Crane.",
+        "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/friends-reunion-poster-fotogramas-1621445919.jpeg"
+    },
+INSERT INTO series{
+	title,
+	year,
+	trailer,
+	synopsis,
+	poster
+}
+VALUES{
+        "Lupin",
+        2021,
+        "www.youtube.com/watch?v=ga0iTWXCGa0/tv/lupin96677",
+        "Inspired by the adventures of Arsène Lupin, gentleman thief Assane Diop sets out to avenge his father for an injustice inflicted by a wealthy family.",
+        "https://i0.wp.com/noescinetodoloquereluce.com/wp-content/uploads/2020/12/LUPIN_KA_Vertical_RGB_ES-scaled.jpg?resize=800%2C1185&ssl=1"
+    },
+INSERT INTO series{
+	title,
+	year,
+	trailer,
+	synopsis,
+	poster
+}
+VALUES{
+        "Supernatural",
+        2005,
+        "www.youtube.com/watch?v=e9aty0dSc2Y/tv/supernatural1622",
+        "When they were boys, Sam and Dean Winchester lost their mother to a mysterious and demonic supernatural force. Subsequently, their father raised them to be soldiers. He taught them about the paranormal evil that lives in the dark corners and on the back roads of America ... and he taught them how to kill it. Now, the Winchester brothers crisscross the country in their '67 Chevy Impala, battling every kind of supernatural threat they encounter along the way. ",
+        "https://www.bolsamania.com/seriesadictos/wp-content/uploads/2013/09/SPN_S_9_Pster1_V11.jpg"
+    }, 
+INSERT INTO series{
+	title,
+	year,
+	trailer,
+	synopsis,
+	poster
+}
+VALUES{
+        "Viking",
+        2016,
+        "www.youtube.com/watch?v=5FWtcorm7hA/m/viking_legacy369698",
+        "The early Middle Ages. A time of heavy swords and dark blood law. The ruling clan is in discord. The guilt for the accidental death of the brother has fallen on the Grand Duke. According to the law, revenge must be taken by the younger brother, a bastard. For the refusal to kill, he has to pay with eve- rything he had, because “for peace you need more swords than for a war”...",
+        "https://m.media-amazon.com/images/I/61noa0sujTL._AC_SY679_.jpg"
+    },
+INSERT INTO series{
+	title,
+	year,
+	trailer,
+	synopsis,
+	poster
+}
+VALUES{
+        "The Umbrella Academy",
+        2019,
+        "www.youtube.com/watch?v=0DAmWHxeoKw/tv/the_umbrella_academy75006",
+        "A dysfunctional family of superheroes comes together to solve the mystery of their father's death, the threat of the apocalypse and more.",
+        "https://m.media-amazon.com/images/I/61G-aaEH9nL._AC_SY679_.jpg"
+    }, 
+INSERT INTO series{
+	title,
+	year,
+	trailer,
+	synopsis,
+	poster
+}
+VALUES{
+        "Gordon Ramsay's Ultimate Cookery Course",
+        2012,
+        "www.youtube.com/watch?v=oMY78TcytGc59442",
+        "In this practical home cookery series Gordon Ramsay strips away the graft and complexity to show how to cook 100 simple, accessible and modern recipes to stake your life on.",
+        "https://images-na.ssl-images-amazon.com/images/I/719JTF0ZcjL.jpg"
+    }, 
+INSERT INTO series{
+	title,
+	year,
+	trailer,
+	synopsis,
+	poster
+}
+VALUES{
+        "Teen Titans Go! vs. Teen Titans",
+        2019,
+        "www.youtube.com/watch?v=7tCawDmKGQA/m/teen_titans_go_vs_teen_titans556901",
+        "In Teen Titans Go! vs Teen Titans, the comedic modern-day quintet takes on their 2003 counterparts when villains from each of their worlds join forces to pit the two Titan teams against each other. They'll need to set aside their differences and work together to combat Trigon, Hexagon, Santa Claus (that's right, Santa!) and time itself in order to save the multiverse.",
+        "https://m.media-amazon.com/images/I/51h5-S9xrWL._AC_.jpg"
+    },
+INSERT INTO series{
+	title,
+	year,
+	trailer,
+	synopsis,
+	poster
+}
+VALUES{
+        "Post Mortem",
+        2020,
+        "www.youtube.com/watch?v=xU2HFzK5OB8/m/post_mortem_2020120652",
+	"In Chile, 1973, during the last days of Salvador Allende's presidency, an employee at a Morgue's recording office falls for a burlesque dancer who mysteriously disappears.",
+        "https://pics.filmaffinity.com/Post_Mortem-653544489-large.jpg"
+    }, 
+INSERT INTO series{
+	title,
+	year,
+	trailer,
+	synopsis,
+	poster
+}
+VALUES{
+        "Señora Acero",
+        2014,
+        "www.youtube.com/watch?v=MhS_d_zMWCA63764",
+        "The adventures of Vicenta Acero, the feared coyote who now leads the dynasty of illicit dealings once under the control of her father.",
+        "https://i.pinimg.com/originals/e6/90/c5/e690c5d868dc578e6a9c48547c3f7a0e.jpg"
+    }, 
+INSERT INTO series{
+	title,
+	year,
+	trailer,
+	synopsis,
+	poster
+}
+VALUES{
+        "Stranger Things",
+        2016,
+        "www.youtube.com/watch?v=mnd7sFt5c3A/tv/stranger_things66732",
+        "When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces, and one strange little girl.",
+        "https://m.media-amazon.com/images/I/71OB1IywjLL._AC_SY679_.jpg"
+    }, 
+INSERT INTO series{
+	title,
+	year,
+	trailer,
+	synopsis,
+	poster
+}
+VALUES{
+        "WandaVision",
+        2021,
+        "www.youtube.com/watch?v=Ch0wMWnXjeA/tv/wandavision/s0185271",
+        "Wanda Maximoff and Vision—two super-powered beings living idealized suburban lives—begin to suspect that everything is not as it seems.",
+        "https://m.media-amazon.com/images/I/91uThdajb1L._AC_SY741_.jpg"
+    },
+INSERT INTO series{
+	title,
+	year,
+	trailer,
+	synopsis,
+	poster
+}
+VALUES{
+        "Jupiter's Legacy",
+        20213,
+        "www.youtube.com/watch?v=TY3IAqm-gpE/tv/jupiters_legacy/s0193484",
+        "As the world's first generation of superheroes (who received their powers in the 1930s) become the revered elder guard in the present, their superpowered children struggle to live up to the legendary feats of their parents.",
+        "https://es.web.img3.acsta.net/r_1280_720/pictures/21/04/07/10/26/5189851.jpg"
+    }, 
+INSERT INTO series{
+	title,
+	year,
+	trailer,
+	synopsis,
+	poster
+}
+VALUES{
+        "Arcane",
+        20213,
+        "www.youtube.com/watch?v=3Svs_hl897c/tv/arcane/s0194605",
+        "Amid the stark discord of twin cities Piltover and Zaun, two sisters fight on rival sides of a war between magic technologies and clashing convictions.",
+        "https://www.cinemascomics.com/wp-content/uploads/2021/09/arcane-character-posters_yrxw2.jpg"
+    },
