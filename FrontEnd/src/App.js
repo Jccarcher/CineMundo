@@ -10,6 +10,7 @@ import Login from './pages/Login'
 import Navbar from './components/Navbar'
 import Signup from './pages/Signup'
 import SingleMovie from './pages/SingleMovie'
+import FormMovie from './components/FormMovie'
 function App() {
   return (
     <BrowserRouter>
@@ -21,6 +22,7 @@ function App() {
         <Route path='/login' element={<Login />} />
         <Route path='/signup' element={<Signup />} />
         <Route path='/video/:id' element={<SingleMovie />} />
+        <Route path='/nuevadata' element={<FormMovie />} />
         <Route path='*' element={<Error />} />
       </Routes>
     </BrowserRouter>

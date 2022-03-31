@@ -44,7 +44,7 @@ const SingleMovie = () => {
     <section className='section movie-section'>
       <h2 className='section-title'>{movie.title}</h2>
       <div className='movie'>
-        <img src={movie.poster} alt={movie.title} />
+        <img src={movie.poster} style={{ color: 'white' }} alt={movie.title} />
         <div className='movie-info'>
           <p>
             <span className='movie-data'>Pelicula:</span>
@@ -61,21 +61,19 @@ const SingleMovie = () => {
 
           <p>
             <span className='movie-data'>Trailer:</span>
-            <br></br>
-            <br></br>
-            <iframe
-              width='560'
-              height='315'
-              src={linkYoutube}
-              title='YouTube video player'
-              frameborder='0'
-              allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-              allowfullscreen
-            ></iframe>
-            {/* <a href={''} target='”_blank”'>
-              Miralo aqui!
-            </a> */}
           </p>
+
+          <br></br>
+          <br></br>
+          <iframe
+            width='auto'
+            height='315'
+            src={linkYoutube}
+            title='YouTube video player'
+            frameborder='0'
+            allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+            allowfullscreen
+          ></iframe>
         </div>
       </div>
     </section>

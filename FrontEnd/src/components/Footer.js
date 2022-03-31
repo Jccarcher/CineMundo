@@ -3,14 +3,14 @@ import {
   AiFillFacebook,
   AiFillTwitterCircle,
   AiFillInstagram,
-  AiFillCaretUp,
 } from 'react-icons/ai'
-import { FaCheck, FaInfoCircle } from 'react-icons/fa'
+import { FaCheck, FaInfoCircle, FaFileUpload } from 'react-icons/fa'
 
-import { Link } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import logo from '../images/logo.png'
 
 const Footer = () => {
+  const navigate = useNavigate()
   return (
     <footer>
       <div className='container'>
@@ -23,24 +23,39 @@ const Footer = () => {
             </p>
             <p>
               <AiFillFacebook />{' '}
-              <Link className='decoration' to='https://www.facebook.com'>
+              <NavLink
+                className='decoration'
+                target='_blank'
+                to='https://www.facebook.com'
+                end
+              >
                 {' '}
                 Facebook
-              </Link>
+              </NavLink>
             </p>
             <p>
               <AiFillInstagram />{' '}
-              <Link className='decoration' to='www.instagram.com'>
+              <NavLink
+                className='decoration'
+                target='_blank'
+                to='https://www.instagram.com'
+                end
+              >
                 {' '}
                 Instagram
-              </Link>
+              </NavLink>
             </p>
             <p>
               <AiFillTwitterCircle />{' '}
-              <Link className='decoration' to='www.twitter.com'>
+              <NavLink
+                className='decoration'
+                target='_blank'
+                to='https://www.twitter.com'
+                end
+              >
                 {' '}
                 Twitter
-              </Link>
+              </NavLink>
             </p>
           </div>
 
@@ -59,7 +74,11 @@ const Footer = () => {
                   placeholder='Email'
                   required
                 />
-                <button type='submit' name='submit' className='btn-suscribe'>
+                <button
+                  type='submit'
+                  name='submit'
+                  className='btn-suscribe decoration'
+                >
                   <FaCheck />
                 </button>
               </form>
@@ -74,11 +93,18 @@ const Footer = () => {
             }}
           >
             <p>
-              <Link to='/about' className='decoration'>
+              <NavLink to='/about' className='decoration'>
                 Acerca de nosotros
                 <br></br>
                 <FaInfoCircle />
-              </Link>
+              </NavLink>
+            </p>
+            <p>
+              <NavLink to='/nuevadata' className='decoration'>
+                Cargar video
+                <br></br>
+                <FaFileUpload />
+              </NavLink>
             </p>
           </div>
         </div>
